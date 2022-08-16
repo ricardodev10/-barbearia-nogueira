@@ -13,13 +13,17 @@
     --fc-white1: #FFFFFF;
     --fc-white2-footer: #FFFAF1;
     --bg-white2-cards-location: #F5F3F4;
-    --bg-white3-button-hover: #D9D9D9;
+    --bg-white3-a-hover: #D9D9D9;
     --fc-red1-h4: #E5383B;
-    --bg-red2-button: #BA181B;
-    --bg-red3-button-hover: #941B1D;
+    --bg-red2-a: #BA181B;
+    --bg-red3-a-hover: #941B1D;
 }
 
-body, button {
+a {
+    text-decoration: none;
+}
+
+body, a {
     font-family: 'Manrope', sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -49,19 +53,20 @@ header h2 {
     font-weight: 400;
 }
 
-header button {
+header a {
     background-color: var(--bg-black1);
     color: var(--fc-white1);
     border: 2px solid #FFFFFF;
     font-size: 1.4rem;
     letter-spacing: 0.005em;
+    text-align: center;
 
     width: 9rem;
 }
 
-header button:hover {
-    color: var(--bg-white3-button-hover);
-    border-color: var(--bg-white3-button-hover);
+header a:hover {
+    color: var(--bg-white3-a-hover);
+    border-color: var(--bg-white3-a-hover);
     cursor: pointer;
 }
 
@@ -86,8 +91,8 @@ header button:hover {
     margin-bottom: 3.2rem;
 }
 
-.hero-text button {
-    background-color: var(--bg-red2-button);
+.hero-text a {
+    background-color: var(--bg-red2-a);
     color: var(--fc-white1);
     padding: 2rem 4rem;
     width: 100%;
@@ -105,8 +110,8 @@ header button:hover {
     margin-bottom: 4.8rem;
 }
 
-.hero button:hover {
-    background-color: var(--bg-red3-button-hover);
+.hero a:hover {
+    background-color: var(--bg-red3-a-hover);
     cursor: pointer;
 }
 
@@ -233,22 +238,6 @@ footer p {
     margin-bottom: 2.8rem;
 }
 
-@media (min-width: 400px) {
-
-    .page,
-    .info-header,
-    .hero,
-    .services {
-        width: 42.4rem;
-        margin: 0 auto;
-    }
-
-    header button {
-        padding: 1rem;
-        width: 17.6rem;
-    }
-}
-
 @media (min-width: 900px) {
 
     .page,
@@ -270,6 +259,11 @@ footer p {
     header h2 {
         font-size: 2.4rem;
         line-height: 3.2rem;
+    }
+
+    header a {
+        padding: 1rem;
+        width: 17.6rem;
     }
 
     header,
@@ -315,7 +309,7 @@ footer p {
         line-height: 2.8rem;
     }
 
-    .hero-text button {
+    .hero-text a {
         margin-left: 0;
         width: 32rem;
     }
